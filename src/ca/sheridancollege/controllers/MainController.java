@@ -133,7 +133,12 @@ public class MainController {
         return "index";
 	}
 	
-
+/*The method below uses the Quartz Scheduler, which lives as a singleton throughout the lifecycle of this application
+ *Each scheduler job is identified by a Task ID 
+ *In order to run a job, a trigger condition must be fulfilled
+ *In this case, the trigger is set to a Date and time object, when the specified date and time arrives, the job is triggered
+ *When a job is triggered, the user gets reminded about a Task via sms and a phone call
+ */
 	public void scheduleTask(Tasks task) 
 	{
 	    try {
@@ -153,7 +158,9 @@ public class MainController {
 			e.printStackTrace();
 		}
 	}
-	 
+	 /*The method below is used to modify an existing job
+      *It uses the Task object to identify and update the properties of an existing Task
+      */
 	public void updateTaskTrigger(Tasks task) 
 	{
 		String taskId = Integer.toString(task.getId());
@@ -172,7 +179,8 @@ public class MainController {
 			e.printStackTrace();
 		}
 	}
-	
+	/*The method below deletes a job and trigger by identifying it with a supplied Task id
+     */
 	public void deleteJobAndTrigger(int id) 
     {
 		String taskId = Integer.toString(id);

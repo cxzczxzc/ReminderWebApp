@@ -14,10 +14,12 @@ import ca.sheridancollege.dao.Dao;
 
 public class TwilioService {
 	private Dao dao = new Dao();
-    public static final String ACCOUNT_SID = "AC8395cf26838faadd7a421ddf410d600d";
-    public static final String AUTH_TOKEN = "b6862ab306ab91988e979ffe8acb0ada";
-    public static final String TWILIO_NUMBER = "+14385008288 ";
-    
+    public static final String ACCOUNT_SID = "<TWILIO ACCOUNT SID GOES HERE>";
+    public static final String AUTH_TOKEN = "<TWILIO ACCOUNT AUTH TOKEN GOES HERE>";
+    public static final String TWILIO_NUMBER = "<TWILIO PHONE NUMBER GOES HERE>";
+    /**
+     *This method registers a new phone number to send the reminders to by sending a verification code that has to be entered on the web portal
+     */
     public String registerNewNumber(String phoneNumber) 
 	{
 	    	try {
@@ -32,7 +34,9 @@ public class TwilioService {
 	    	}
 	}
     
-    
+   /**
+    *This method sends a sms to the specified phone number and the contents of the text message
+    */
     public void sendSMS(String phoneNumber, String sms) 
     {
 	    	try {
@@ -48,6 +52,11 @@ public class TwilioService {
 	    		System.out.println(e.getMessage());
     	}
     }
+    /*
+     *This method calls the specified number.
+     *The contents of the message that will be played in the call is stored in a TwiML file
+     *Twilio Text-to-speech engine reads that file and plays the message
+     */
     public void call(String phoneNumber, String message, String filename) 
     {
     	Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
