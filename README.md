@@ -2,7 +2,7 @@
 Appointment Reminder Application built using Java Spring MVC and Twilio.
 
 ## What is the use of this application?
-This a a proof of concept web application that can serve as a personal assistant for scheduling tasks and reminders. 
+This is a web application that can serve as a personal assistant for scheduling tasks and reminders. 
 The application takes the user to a web portal where they can create, add, modify or remove existing appointments or reminders. 
 
 When it is time for an appointment, the user gets a phone call and a text message containing the description of the task or reminder specified by them.
