@@ -1,5 +1,5 @@
 # ReminderWebApp
-Appointment Reminder Application built using Java Spring MVC and Twilio
+Appointment Reminder Application built using Java Spring MVC and Twilio.
 
 ## What is the use of this application?
 
