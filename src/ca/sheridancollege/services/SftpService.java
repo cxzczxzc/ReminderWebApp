@@ -12,11 +12,11 @@ public class SftpService {
   
 	public void Sftp(String filename) 
 	{
-		 String SFTPHOST = "142.55.32.48";
+		 String SFTPHOST = "<IP for SFTP Server>";
 	        int SFTPPORT = 22;
-	        String SFTPUSER = "ahmasaad";
-	        String SFTPPASS = "tRwM5A!dXQg";
-	        String SFTPWORKINGDIR = "/home/ahmasaad/public_html/javaproject";
+	        String SFTPUSER = "<Enter username>";
+	        String SFTPPASS = "<Enter Password to SFTP Server>";
+	        String SFTPWORKINGDIR = "<Working directory path on the SFTP Server>";
 
 	        Session session = null;
 	        Channel channel = null;
@@ -34,7 +34,7 @@ public class SftpService {
 	            channel.connect();
 	            channelSftp = (ChannelSftp) channel;
 	            channelSftp.cd(SFTPWORKINGDIR);
-	            File f = new File("/Users/xcode/Desktop/"+filename);
+	            File f = new File("/Users/saad/Desktop/"+filename);
 	            channelSftp.put(new FileInputStream(f), f.getName());
 	        } catch (Exception ex) {
 	            ex.printStackTrace();
