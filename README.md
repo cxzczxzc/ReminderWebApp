@@ -14,6 +14,8 @@ When it is time for an appointment, the user gets a phone call and a text messag
 * **Quartz Scheduler** - To schedule appointments. It has two main components - job and trigger. The job is what has to be done and the 
   trigger is what tells the scheduler to start the job. It runs as a singleton throughout the lifecycle of the application.
 
+* **MySQL** - Database that stores appointment information.
+
 ## How does the application function?
 
 The application's web application component is built using Spring MVC. Here's what happens when a user first uses this application:
