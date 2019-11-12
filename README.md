@@ -16,13 +16,13 @@ When it is time for an appointment, the user will get a phone call and a text me
 ## How does the application function?
 
 The application's web application component is built using Spring MVC. Here's what happens when a user first uses this application:
-1. The user goes to the application homepage. They are presented with the option to register a new phone number
+1. The user goes to the application homepage. They are presented with the option to register a new phone number.
 2. The user enters their phone number. Twilio triggers a call to the user's cell phone which contains a verification code.
   This verification code is entered by the user in the application. A request with the validation code is made to Twilio upon submitting the code. 
   The number gets registered to receive phone calls and text messages through this application.
 3. The user creates Tasks and adds a description to them.
-4. The description from the task is converted to a TwiML file and SFTPd to a server
-5. The task is scheduled to be run at the user specified time by the Quartz Scheduler
+4. The description from the task is converted to a TwiML file and SFTPd to a server.
+5. The task is scheduled to be run at the user specified time by the Quartz Scheduler.
 6. When the time arrives, Quartz triggers the task and a SMS and phone call is sent to the user, which contain the details about the task.
 
 
