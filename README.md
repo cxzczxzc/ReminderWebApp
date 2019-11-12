@@ -28,4 +28,8 @@ The application's web application component is built using Spring MVC. Here's wh
 5. The task is scheduled to be run at the user specified time by the Quartz Scheduler.
 6. When the time arrives, Quartz triggers the task and a SMS and phone call is sent to the user, which contain the details about the task.
 
-
+## How can this application be scaled and improved?
+A few pointers to scale this application are:-
+* Convert it to a Spring Boot Application and create a Docker image for this application.
+* Take out the configuration parameters (Twilio credentials, SFTP server information etc.) and load them via configuration files.
+* Add authentication / authorization to be able to serve multiple users.
